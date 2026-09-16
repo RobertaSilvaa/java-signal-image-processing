@@ -1,0 +1,30 @@
+# Java build output
+bin/
+out/
+build/
+target/
+*.class
+*.jar
+*.war
+*.ear
+
+# IDE and editor files
+.idea/
+*.iml
+.project
+.classpath
+.settings/
+
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Logs and temporary files
+*.log
+*.tmp
+*.swp
+*~
