@@ -125,29 +125,3 @@ The 2D application applies convolution-based image filters, including:
 - Gaussian filtering.
 
 The program validates image loading, matrix dimensions, kernel dimensions, and invalid numerical values before processing.
-
-## Important Note About the 1D Coefficient
-
-The 1D impulse response currently follows:
-
-```text
-h[n] = (1 - a) * a^n
-```
-
-The available interface values include `a = 1.0` and `a = 2.0`.
-
-For `a = 1.0`, the impulse response becomes zero. For `a = 2.0`, the response grows exponentially instead of decaying.
-
-These values were preserved because the provided material did not define whether the formula or the allowed coefficient values should be changed. If the assignment specifies a different formula or valid range for `a`, the implementation should be updated accordingly.
-
-## Verification Status
-
-The source code was reviewed for syntax, cross-file consistency, identifier naming, input validation, error handling, and convolution logic.
-
-Local compilation and execution must still be verified on the target machine. The project should not be considered fully validated until the actual compiler output and runtime behavior have been checked.
-
-## Suggested Commit Message
-
-```text
-fix: resolve default image path across execution directories
-```
